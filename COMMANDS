@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# append to log
+# update times like "2 hours ago"
+# make sure 0's are entered that may not have been logged
+# change field separator to tab
+# comment out any comments that should not be parsed
+# change Eletriptan to 40mg eletriptan
+# change Domperidon to 10mg domperidon
+# run the following
+# make sure last line is not blank
+
+mkdir -p data/parsed
+mkdir plots
+
+python parse_clue.py $(find . -type f -name "ClueBackup-*" |sort|tail -n 1) |sort|uniq|grep -E 'light|medium|heavy|spotting' > data/parsed/clue.read
+cat data/log | grep -v "#" | grep -i aura > data/parsed/aura
+cat data/log | grep -v "#" | grep -i naus > data/parsed/nausea
+grep eletriptan data/log|sed 's/mg /	/' > data/parsed/drugs
+
+cat data/log | grep -v "#" | grep -vi aura | grep -vi naus | grep -v mg | grep -v cannabis |grep -v amitriptiline > data/migraine_current
+cat data/migraine_historical data/migraine_current > data/migraine
+python parse_migraine.py data/migraine > data/parsed/migraine_start_end
+
+./COMMANDS.R
+
+#---- unused
+#python parse_myfitnesspal.py > clean_data/food-sept   # per month, then clean food names
+#cat clean_data/daily-drugs <(cat clean_data/log | grep -v "#" | egrep -i "mg|cannabis|amitriptyline") | sed s/mg// | sort > clean_data/drugs
+#open in vi and :%s/mg /^I/g and :%s/cannabis/^Icannabis/g
