@@ -131,6 +131,8 @@ m2018q3 <- make_migraine_plot("2018-07-01", "2018-09-30")
 m2018q4 <- make_migraine_plot("2018-10-01", "2018-12-31")
 m2019q1 <- make_migraine_plot("2019-01-01", "2019-03-31")
 m2019q2 <- make_migraine_plot("2019-04-01", "2019-06-30")
+m2019q3 <- make_migraine_plot("2019-07-01", "2019-09-30")
+m2019q4 <- make_migraine_plot("2019-10-01", "2019-12-31")
 
 c2017q3 <- make_clue_plot(c, "2017-07-01", "2017-09-30", "tomato", "darkred", "")
 c2017q4 <- make_clue_plot(c, "2017-10-01", "2017-12-31", "tomato", "darkred", "")
@@ -140,6 +142,8 @@ c2018q3 <- make_clue_plot(c, "2018-07-01", "2018-09-30", "tomato", "darkred", ""
 c2018q4 <- make_clue_plot(c, "2018-10-01", "2018-12-31", "tomato", "darkred", "")
 c2019q1 <- make_clue_plot(c, "2019-01-01", "2019-03-31", "tomato", "darkred", "")
 c2019q2 <- make_clue_plot(c, "2019-04-01", "2019-06-30", "tomato", "darkred", "")
+c2019q3 <- make_clue_plot(c, "2019-07-01", "2019-09-30", "tomato", "darkred", "")
+c2019q4 <- make_clue_plot(c, "2019-10-01", "2019-12-31", "tomato", "darkred", "")
 
 a2017q3 <- make_other_plot(aura, "2017-07-01", "2017-09-30", "lightgreen", "darkgreen", "aura")
 a2017q4 <- make_other_plot(aura, "2017-10-01", "2017-12-31", "lightgreen", "darkgreen", "aura")
@@ -165,7 +169,7 @@ plot_grid(title_2017, NULL, NULL, NULL, NULL, NULL, NULL, c2017q3, m2017q3, NULL
 ggsave(file.path(plots_dir, "migraine-plot-2017.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2018, c2018q1, m2018q1, NULL, c2018q2, m2018q2, NULL, c2018q3, m2018q3, NULL, c2018q4, m2018q4, align="v", nrow=14, rel_heights=heights)
 ggsave(file.path(plots_dir, "migraine-plot-2018.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
-plot_grid(title_2019, c2019q1, m2019q1, NULL, c2019q2, m2019q2, NULL, NULL, NULL, NULL, NULL, NULL, align="v", nrow=14, rel_heights=heights)
+plot_grid(title_2019, c2019q1, m2019q1, NULL, c2019q2, m2019q2, NULL, c2019q3, m2019q3, NULL, c2019q4, m2019q4, align="v", nrow=14, rel_heights=heights)
 ggsave(file.path(plots_dir, "migraine-plot-2019.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 
 # detailed plots
