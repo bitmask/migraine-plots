@@ -17,12 +17,12 @@
 2017-08-29 12:09:00	5
 2017-08-29 16:55:00	0
 #2017-08-30 00:00:00	saw doctor Søren Pedersen, prescribed sumatriptan, later naratriptan by phone
-2017-08-30 00:00:00	50mg sumatriptan
-2017-08-30 00:00:00	200mg ibuprofen
 2017-08-30 13:12:00	6
+2017-08-30 13:12:00	50mg sumatriptan
+2017-08-30 13:12:00	200mg ibuprofen
 2017-08-30 16:57:00	0
-2017-08-31 00:00:00	50mg sumatriptan
-2017-08-31 00:00:00	200mg ibuprofen
+2017-08-31 10:33:00	50mg sumatriptan
+2017-08-31 10:33:00	200mg ibuprofen
 2017-08-31 10:33:00	4
 2017-09-01 01:04:54	400mg ibuprofen
 2017-09-01 07:54:00	0
@@ -30,8 +30,8 @@
 2017-09-01 12:45:00	Nauseous
 2017-09-01 14:50:00	Nauseous
 2017-09-01 20:04:00	0
-2017-09-02 00:00:00	2.5mg naratriptan
-2017-09-02 00:00:00	cannabis
+2017-09-02 14:31:00	2.5mg naratriptan
+2017-09-02 14:31:00	cannabis
 2017-09-02 14:31:00	6
 2017-09-02 17:07:00	0
 2017-09-03 10:10:00	6
@@ -47,8 +47,8 @@
 2017-09-06 08:27:00	8
 2017-09-06 18:00:00	Nauseous
 2017-09-06 21:02:00	0
-2017-09-07 00:00:00	2.5mg naratriptan
-2017-09-07 00:00:00	200mg ibuprofen
+2017-09-07 08:47:00	2.5mg naratriptan
+2017-09-07 08:47:00	200mg ibuprofen
 2017-09-07 08:47:00	5
 2017-09-07 18:30:00	0
 2017-09-08 11:59:00	4
@@ -91,7 +91,7 @@
 2017-09-15 04:22:59	0
 2017-09-15 07:59:33	2
 2017-09-15 01:04:54	400mg ibuprofen
-2017-09-15 01:04:54	25mg metoprolol
+2017-09-15 01:04:54	25mg metoprolol preventative
 2017-09-15 10:05:03	2
 2017-09-15 11:24:11	Aura
 2017-09-15 12:32:03	Aura
@@ -99,7 +99,6 @@
 2017-09-15 14:07:55	2
 2017-09-15 18:22:39	2
 2017-09-15 19:52:13	4
-2017-09-15 20:14:06	25mg metoprolol
 2017-09-16 07:29:17	2
 2017-09-16 11:01:19	Aura
 2017-09-16 11:30:39	0
@@ -156,6 +155,7 @@
 2017-09-24 11:45:52	Aura
 2017-09-26 16:28:59	0
 #2017-09-27 00:38:34	saw neurologist, prescribed more metoprolol 50mg
+2017-09-27 00:38:34	50mg metoprolol preventative
 2017-09-27 12:38:34	Aura
 2017-09-27 13:38:42	4
 2017-09-27 13:38:47	50mg sumatriptan
@@ -278,6 +278,7 @@
 2017-10-24 11:42:49	2
 2017-10-24 14:51:44	4
 2017-10-24 20:59:59	2
+2017-10-24 20:59:59	75mg metoprolol preventative
 2017-10-25 10:00:02	4
 2017-10-25 10:44:35	Aura
 2017-10-25 13:57:15	4
@@ -307,7 +308,7 @@
 2017-11-03 08:07:11	2
 2017-11-04 11:35:34	2
 2017-11-04 16:35:34	0
-#2017-11-08 11:38:31	As of yesterday, 100mg metoprolol
+2017-11-07 11:38:31	100mg metoprolol preventative
 2017-11-08 11:39:04	2
 2017-11-08 14:37:58	4
 2017-11-08 14:37:58	Aura
@@ -383,7 +384,7 @@
 2017-11-24 15:30:49	6
 2017-11-24 22:04:36	4
 2017-11-25 07:20:53	4
-2017-11-25 11:41:37	125mg metoprolol
+2017-11-25 11:41:37	125mg metoprolol preventative  
 2017-11-25 16:17:49	2
 2017-11-26 10:17:53	2
 2017-11-26 12:54:08	Aura
@@ -408,7 +409,7 @@
 2017-12-02 08:25:13	Aura
 2017-12-02 20:25:13	Aura
 2017-12-03 00:13:38	2
-#2017-12-03 08:43:14	150mg metoprolol
+2017-12-03 08:43:14	150mg metoprolol preventative
 2017-12-04 00:06:36	2
 #2017-12-04 00:06:56	Finally not so depressed in evening
 2017-12-04 08:19:08	2
@@ -447,24 +448,20 @@
 2017-12-13 11:20:03	Aura
 2017-12-13 14:21:53	4
 #2017-12-13 14:21:53	this sucks
-#2017-12-14 10:11:49	125mg metoprolol
-#2017-12-14 10:19:53	Start amitriptyline
+2017-12-14 10:11:49	125mg metoprolol preventative
 2017-12-14 13:12:14	4
 2017-12-14 21:12:14	2
-2017-12-14 21:12:14	50mg amitriptyline
+2017-12-14 21:12:14	50mg amitriptyline preventative
 2017-12-15 12:54:40	2
 #2017-12-15 12:54:40	slept until noon, slept all afternoon, went to bed early
-2017-12-15 19:54:40	50mg amitriptyline
 2017-12-16 12:54:40	0
-2017-12-16 19:54:40	20mg amitriptyline
-2017-12-17 12:02:56	100 mg metoprolol
+2017-12-16 19:54:40	25mg amitriptyline preventative
+2017-12-17 12:02:56	100mg metoprolol preventative
 2017-12-17 12:03:54	0
 #2017-12-17 12:03:54	Feel so normal. Headache trying to ache but gets shut down. 
 #2017-12-17 12:04:28	Half amitriptyline last night, feel much less jittery and tired
 #2017-12-17 12:04:45	Feel like I want to create and be curious about the world
-2017-12-17 19:04:45	30mg amitriptyline
 #2017-12-18 11:53:47	Still feel great. Headache might be trying to form, but doesn't get past pressure in head, doesn't amplify itself, doesn't persist.
-2017-12-18 19:53:47	25mg amitriptyline
 #2017-12-19 15:00:32	Milligrams amitriptyline and result
 #2017-12-19 15:01:11	Saturday 50 jittery plus cookie, tripping out
 #2017-12-19 15:01:33	Sunday 20 plus half cookie totally relaxed at spa
@@ -477,9 +474,12 @@
 #2017-12-20 13:17:08	25 great in morning, some 2 headache now 
 2017-12-20 13:17:08	2
 2017-12-20 20:17:08	0
+2017-12-23 20:17:08	75mg metoprolol preventative
+2017-12-30 20:17:08	50mg metoprolol preventative
 #2018-01-04 15:47:31	Weird headache sporadically, eyes red. No real migraine. Tired
 2018-01-04 10:47:31	2
 2018-01-04 20:47:31	0
+2018-01-07 15:26:00	0mg metoprolol preventative
 #2018-01-08 00:17:23	Today was a great day. Woke up, photography in kitchen. Yoga. Finished cleaning up. Did laundry. Cleaned tiles in kitchen. Dusted, arranged living room. Made a space beautiful with joy. Felt joy and contentment. Made plans for a better? world. Made them with my hands. Went to the gym. Lifted heavy things. Felt great. Ate homemade broth. Was so easy to make, and delicious and heavy and nutritious. Love this. Want more of this always. Cleaning feels good because it gives space to create. What is the use of a thing in a space. Give it utility or give the space utility. Things, organized. The library of things.
 #2018-01-08 00:19:58	Feel so productive with everything that's not real work what I get paid to do. Want to start new things. Invent full time on my blueprints. How can I make this happen
 2018-01-08 15:16:27	2
@@ -487,7 +487,6 @@
 #2018-01-08 15:17:51	Some headache in morning on 4 of Jan but not sustained pain. This is a lot more like how it was before
 #2018-01-08 15:18:43	Rubber band around my forehead, tightening above right eye (opposite side than normal)
 2018-01-08 15:18:43	6
-#2018-01-08 15:26:00	Stopped taking metoprolol yesterday.... 
 #2018-01-08 15:44:01	Yup, it's back
 #2018-01-08 15:45:23	Eye red and watery yesterday also. watch this symptom
 #2018-01-08 16:27:00	Slept a little at desk at work. Betterish
@@ -506,17 +505,12 @@
 2018-01-12 13:23:11	2
 2018-01-12 15:05:05	4
 2018-01-12 20:05:05	0
-2018-01-13 20:05:05	35mg amitriptyline
-2018-01-14 20:05:05	35mg amitriptyline
-2018-01-15 20:05:05	35mg amitriptyline
-2018-01-16 20:05:05	35mg amitriptyline
-2018-01-17 20:05:05	45mg amitriptyline
+2018-01-13 20:05:05	35mg amitriptyline preventative
+2018-01-17 20:05:05	45mg amitriptyline preventative
 #2018-01-18 13:05:18	Aura, eyes red and swollen
 2018-01-18 13:05:18	Aura
 2018-01-18 14:29:11	2
-2018-01-19 19:40:01	50mg amitriptyline
-2018-01-20 19:40:01	50mg amitriptyline
-2018-01-21 19:40:01	50mg amitriptyline
+2018-01-19 19:40:01	50mg amitriptyline preventative
 #2018-01-22 14:40:38	Headache but I think I'm getting sick, not migraine
 2018-01-26 13:39:42	Aura
 #2018-02-01 12:37:14	Headache, getting sick?
@@ -566,9 +560,9 @@
 2018-02-15 15:45:50	4
 2018-02-15 15:45:58	Nauseous
 #2018-02-15 15:46:23	This sucks. Slept a little, don't feel better
+#2018-02-16 11:33:28	75mg amitriptyline last night
 #2018-02-16 10:29:46	Better after gym but only for a short while
 2018-02-16 10:29:54	Aura
-#2018-02-16 11:33:28	75mg amitriptyline last night
 2018-02-16 11:33:31	Aura
 2018-02-16 12:55:30	2
 2018-02-16 12:55:36	Aura
@@ -643,7 +637,7 @@
 2018-03-10 15:48:05	Aura
 2018-03-11 01:29:17	4
 2018-03-11 01:29:20	40mg eletriptan
-2018-03-12 00:37:32	Only 25mg amitriptyline
+#2018-03-12 00:37:32	Only 25mg amitriptyline
 2018-03-12 14:34:59	4
 2018-03-12 14:41:30	40mg eletriptan
 2018-03-12 15:41:02	6
@@ -978,7 +972,7 @@
 2018-05-18 22:02:49	0
 #2018-05-19 02:37:32	Saw Dr today, was useless. prescribed candesartan
 #2018-05-19 02:38:17	Cannabis beans
-#2018-05-19 02:38:29	40mg amitriptyline
+2018-05-19 02:38:29	40mg amitriptyline preventative
 #2018-05-21 22:50:06	Now spiking a bit
 2018-05-22 09:08:07	Aura
 2018-05-22 12:08:07	Aura
@@ -986,7 +980,7 @@
 #2018-05-22 12:08:34	Eyes still weeping
 2018-05-22 13:33:48	0
 2018-05-22 17:33:51	2
-#2018-05-22 22:20:59	30mg amitriptyline
+2018-05-22 22:20:59	30mg amitriptyline preventative
 2018-05-23 12:53:15	2
 2018-05-23 16:00:19	Aura
 2018-05-24 11:08:10	Aura
@@ -1005,7 +999,7 @@
 2018-05-25 21:50:38	4
 2018-05-26 10:31:16	0
 #2018-05-26 10:46:41	Woke up not feeling exhausted today
-#2018-05-26 23:48:02	20mg amitriptyline
+2018-05-26 23:48:02	20mg amitriptyline preventative
 #2018-05-26 23:53:06	Still not really headachy...
 2018-05-27 10:37:54	2
 2018-05-28 00:25:52	4
@@ -1019,7 +1013,7 @@
 2018-05-29 19:17:36	4
 #2018-05-29 19:17:48	Bah, head feels foggy and empty
 2018-05-29 21:14:10	2
-#2018-05-29 22:48:06	30mg amitriptyline
+2018-05-29 22:48:06	30mg amitriptyline preventative
 2018-05-30 09:16:08	2
 2018-05-30 13:21:20	Aura
 2018-05-30 14:48:33	Nauseous
@@ -1038,7 +1032,7 @@
 2018-06-01 13:12:50	Nauseous
 2018-06-01 17:08:19	Aura
 #2018-06-01 17:09:34	At gym, so hard to get energy, space is all wrong
-#2018-06-01 21:31:55	20mg amitriptyline
+2018-06-01 21:31:55	20mg amitriptyline preventative
 2018-06-02 10:45:32	Aura
 2018-06-02 12:45:23	4
 2018-06-03 10:19:08	0
@@ -1052,7 +1046,7 @@
 2018-06-04 10:53:37	Aura
 2018-06-05 07:24:52	0
 2018-06-05 20:24:57	2
-#2018-06-05 22:25:47	10mg amitriptyline
+2018-06-05 22:25:47	10mg amitriptyline preventative
 #2018-06-05 23:57:15	Eyes watering
 #2018-06-06 13:52:20	2 all day with spikes
 2018-06-06 07:52:20	2
@@ -1079,13 +1073,13 @@
 2018-06-08 14:11:10	Aura
 2018-06-08 15:36:34	0
 2018-06-09 09:59:58	2
+2018-06-09 12:13:12	10mg amitriptyline preventative
 #2018-06-10 00:06:27	Lsd yesterday, not so headachy
 #2018-06-10 00:06:46	Now, tired headache
 #2018-06-10 01:32:32	6 but in middle center top of head
-#2018-06-10 12:13:12	10mg amitriptyline last night
 #2018-06-10 12:13:35	No migraine headache, other headache 2
 2018-06-10 07:54:42	0
-#2018-06-11 07:55:15	Start candesartan 8mg
+2018-06-11 07:55:15	8mg candesartan preventative
 2018-06-11 07:55:15	2
 #2018-06-11 10:53:40	Eyes watering
 #2018-06-11 21:44:09	2 all day
@@ -1105,7 +1099,7 @@
 2018-06-12 17:45:12	Nauseous
 #2018-06-12 19:33:30	This feels like food poisoning
 #2018-06-12 22:25:00	Better
-#2018-06-12 23:43:20	0mg amitriptyline
+2018-06-12 23:43:20	0mg amitriptyline preventative
 2018-06-13 09:26:07	4
 2018-06-13 09:26:12	Nauseous
 2018-06-13 11:35:59	Aura
@@ -1138,7 +1132,7 @@
 2018-06-15 14:27:36	Nauseous
 2018-06-15 15:32:25	10mg domperidon
 #2018-06-15 16:27:12	Maybe I feel better
-#2018-06-16 11:20:38	16mg candesartan
+2018-06-16 06:20:38	16mg candesartan preventative
 2018-06-16 07:08:30	4
 2018-06-16 11:38:45	0
 2018-06-16 15:00:48	4
@@ -1362,7 +1356,7 @@
 2018-07-20 00:56:52	0
 #2018-07-20 00:56:52	0!?
 2018-07-20 00:57:03	2
-#2018-07-20 08:44:59	24mg candesartan
+2018-07-20 08:44:59	24mg candesartan preventative
 2018-07-20 13:24:52	4
 2018-07-20 14:24:52	2
 #2018-07-21 15:55:13	Head hurts immensely when bending over
@@ -1432,7 +1426,7 @@
 2018-08-13 16:34:25	4
 2018-08-13 19:20:28	0
 2018-08-13 23:20:33	2
-2018-08-14 09:01:11	32mg candesartan
+2018-08-14 09:01:11	32mg candesartan preventative
 2018-08-14 22:01:11	4
 #2018-08-15 09:53:42	Lots of pressure in my head
 #2018-08-16 00:29:18	No headache, but can hear pulse all the time
@@ -1905,7 +1899,7 @@
 #2019-04-30 17:39:11	Nauseous
 #2019-04-30 21:28:38	Such bad cramps all day
 2019-05-01 13:51:09	2
-#2019-05-01 13:51:22	Indomethacin 75mg
+2019-05-01 13:51:22	75mg indomethacin preventative
 #2019-05-01 14:33:49	Aaaaaa this might actually be working
 #2019-05-01 14:40:59	Maybe not
 #2019-05-01 15:20:26	Aura
@@ -1967,7 +1961,7 @@
 2019-06-02 12:08:23	6
 2019-06-03 07:58:38	2
 2019-06-03 09:58:41	4
-#2019-06-03 09:58:51	Sertraline 50mg
+2019-06-03 09:58:51	50mg sertraline preventative
 2019-06-03 10:46:08	Aura
 2019-06-03 11:44:45	Nauseous
 2019-06-03 20:47:30	2
@@ -2027,6 +2021,8 @@
 2019-07-01 09:01:39	40mg eletriptan
 2019-07-01 12:13:04	4
 2019-07-01 20:07:43	2
+2019-07-01 23:07:43	0mg indomethacin preventative
+# probably stopped taking indomethacin around here, didn't make good notes
 2019-07-02 09:07:52	4
 #2019-07-02 13:08:04	Aura all the time since yesterday
 2019-07-03 00:37:07	6
@@ -2179,6 +2175,7 @@
 2019-08-25 07:36:00	2
 2019-08-25 13:37:00	0
 2019-08-25 17:21:00	2
+2019-08-25 18:03:00	100mg sertraline preventative
 2019-08-26 11:01:00	6
 2019-08-26 21:28:00	4
 2019-08-27 07:28:00	6
@@ -2190,8 +2187,8 @@
 2019-08-29 21:19:00	2
 2019-08-30 11:01:00	6
 2019-08-30 21:00:00	2
+2019-08-30 23:46:00	16mg candesartan preventative
 2019-08-31 10:46:00	6
-#2019-08-31 10:46:00	Yesterday 16mg candesartan
 2019-08-31 16:05:00	2
 2019-09-01 01:02:00	6
 2019-09-01 07:02:00	4
@@ -2199,8 +2196,9 @@
 2019-09-02 12:48:00	6
 2019-09-02 16:29:00	4
 2019-09-02 17:31:00	Aura
-#2019-09-02 18:03:00	9 days ago, 100mg sertraline
-#2019-09-02 23:35:00	25mg topiramate
+2019-09-02 23:35:00	25mg topiramate preventative
+2019-09-02 23:45:00	0mg sertraline preventative
+# didn't log exactly when i stopped taking the sertraline.  didn't stay at 100 for very long
 2019-09-03 07:47:00	6
 #2019-09-03 15:03:00	Eyes watering all day
 2019-09-03 23:23:00	4
@@ -2214,8 +2212,8 @@
 2019-09-06 11:39:00	6
 2019-09-07 02:39:00	4
 2019-09-07 18:41:00	2
+2019-09-07 21:28:00	50mg topiramate preventative
 2019-09-08 11:33:00	2
-#2019-09-08 21:28:00	Yesterday 50mg topiramate
 2019-09-09 09:48:00	4
 2019-09-10 07:15:00	2
 2019-09-10 21:00:00	6
@@ -2248,14 +2246,14 @@
 #2019-09-19 13:45:00	Smelled plant like mothballs in botanic garden
 2019-09-19 14:12:00	2
 #2019-09-19 19:12:00	Weird feeling, mostly dizzy, pulses occasionally, haven't been testing head or doing anything hard
+2019-09-19 22:24:00	8mg candesartan preventative
 2019-09-20 06:48:00	4
 2019-09-20 12:30:00	6
+2019-09-20 21:24:00	75mg topiramate
 2019-09-21 02:14:00	6
 #2019-09-21 02:14:00	Permanent after image
 #2019-09-21 02:14:00	Can't understand gravity
 2019-09-21 07:17:00	4
-#2019-09-21 07:24:00	Yesterday 75 mg topiramate
-#2019-09-21 07:24:00	2 days ago 8 mg candesartan
 2019-09-21 21:04:00	4
 2019-09-22 16:32:00	6
 2019-09-23 13:16:00	2
@@ -2278,14 +2276,14 @@
 2019-09-28 14:37:00	4
 2019-09-29 07:51:00	40mg eletriptan
 2019-09-29 11:45:00	2
+2019-09-29 21:39:00	0mg candesartan preventative
 #2019-09-30 00:22:00	Not terrible today. Omg
 2019-09-30 07:30:00	2
 2019-09-30 13:50:00	4
 2019-09-30 19:19:00	6
 2019-10-01 07:22:00	2
 #2019-10-01 18:22:00	Less headache today, but still headache when I stand up
-#2019-10-02 06:39:00	No candesartan for days
-#2019-10-02 14:43:00	50 mg topiramate this morning
+2019-10-02 14:43:00	100mg topiramate preventative
 #2019-10-02 14:44:00	Tingling in fingers and toes
 2019-10-02 14:44:00	2
 2019-10-02 18:56:00	4
@@ -2314,7 +2312,7 @@
 2019-10-14 10:15:00	4
 2019-10-14 18:17:00	2
 2019-10-15 11:40:00	Aura
-#2019-10-15 18:07:00	75 mg topiramate last night
+2019-10-15 18:07:00	125mg topiramate preventative
 #2019-10-15 18:08:00	Missed this morning because prescription fuckup
 2019-10-15 18:08:00	2
 2019-10-17 10:48:00	2
@@ -2340,7 +2338,7 @@
 2019-10-25 11:12:00	Aura
 2019-10-25 14:54:00	4
 2019-10-26 11:31:00	4
-#2019-10-26 11:50:00	150mg topiramate
+2019-10-26 11:50:00	150mg topiramate preventative
 2019-10-27 08:09:00	4
 2019-10-28 07:49:00	2
 2019-10-28 13:55:00	4
@@ -2350,7 +2348,7 @@
 2019-10-29 15:39:00	4
 #2019-10-29 17:39:00	So dumb
 2019-10-30 09:39:00	2
-#2019-10-30 09:39:00	125mg topiramate
+2019-10-30 09:39:00	125mg topiramate preventative
 2019-10-30 12:41:00	4
 #2019-10-30 17:05:00	Stayed home, doing better
 2019-10-30 17:05:00	2
@@ -2376,9 +2374,9 @@
 2019-11-05 09:14:00	Aura
 2019-11-05 19:43:00	6
 2019-11-06 07:31:00	2
+2019-11-06 13:53:00	100mg topiramate preventative
 2019-11-07 08:59:00	2
 2019-11-07 11:29:00	Aura
-#2019-11-07 13:53:00	Yesterday 100g topiramate
 2019-11-07 14:37:00	4
 2019-11-08 07:00:00	4
 2019-11-08 12:05:00	2
@@ -2396,7 +2394,7 @@
 #2019-11-17 00:29:00	Less sick
 2019-11-17 00:29:00	0
 2019-11-18 10:51:00	4
-#2019-11-18 11:09:00	Today, 25/25mg topiramate
+2019-11-18 11:09:00	50mg topiramate preventative
 2019-11-18 11:29:00	40mg eletriptan
 2019-11-18 11:45:00	2
 2019-11-19 06:26:00	6
@@ -2404,13 +2402,14 @@
 #2019-11-19 12:32:00	still congested
 2019-11-20 07:08:00	4
 2019-11-20 15:08:00	2
-#2019-11-20 20:28:00	Pizotifen 500mcg
+2019-11-20 20:28:00	0.5mg pizotifen preventative
 #2019-11-21 11:20:00	So tired, so thirsty
 2019-11-21 11:20:00	4
 #2019-11-21 17:36:00	So tired, so thirsty
 2019-11-22 18:36:00	4
-#2019-11-22 20:43:00	25/0 topiramate
+2019-11-22 20:43:00	25mg topiramate preventative
 2019-11-24 11:47:00	2
+2019-11-24 14:33:00	0mg topiramate preventative
 2019-11-25 11:32:00	4
 #2019-11-25 14:33:00	Yesterday, fuck topiramate
 2019-11-25 19:17:00	6
@@ -2431,7 +2430,7 @@
 2019-12-02 12:15:00	4
 2019-12-03 07:04:00	0
 2019-12-03 11:40:00	2
-#2019-12-03 11:41:00	Pizotifen 0.5/0.5
+2019-12-03 11:41:00	1mg pizotifen preventative
 2019-12-03 14:50:00	4
 2019-12-03 17:27:00	6
 2019-12-04 22:54:00	4
@@ -2446,7 +2445,7 @@
 #2019-12-09 15:50:00	Slept forever again. Only one 0.5 pizotifen today
 2019-12-10 10:44:00	4
 2019-12-11 07:05:00	2
-#2019-12-11 23:57:00	Pizotifen 0.5/1
+2019-12-11 23:57:00	1.5mg pizotifen preventative
 2019-12-12 07:09:00	0
 2019-12-13 00:09:00	4
 2019-12-14 12:14:00	0
@@ -2468,6 +2467,7 @@
 2019-12-23 01:30:00	4
 2019-12-23 19:57:00	2
 2019-12-24 12:23:00	0
+2019-12-25 12:23:00	0.5mg pizotifen preventative
 2019-12-29 13:23:00	4
 2019-12-29 13:35:00	40mg eletriptan
 2019-12-30 03:04:00	6
@@ -2492,18 +2492,19 @@
 2020-01-07 00:17:00	4
 2020-01-07 07:31:00	4
 2020-01-07 17:09:00	6
+2020-01-07 23:09:00	0mg pizotifen preventative
 2020-01-08 01:29:00	6
 2020-01-08 01:29:00	40mg eletriptan
 2020-01-08 09:00:00	2
 2020-01-08 10:30:00	4
+2020-01-08 21:07:00	10mg nortriptyline preventative
 2020-01-09 06:43:00	4
 #2020-01-09 11:43:00	Sleep paralysis
 2020-01-09 18:25:00	4
 2020-01-10 00:52:00	2
 2020-01-10 08:13:00	2
-#2020-01-12 21:05:00	20 mg nortriptyline
+2020-01-12 21:05:00	20mg nortriptyline preventative
 2020-01-12 21:07:00	2
-#2020-01-12 21:07:00	10 mg on Wednesday
 #2020-01-13 08:53:00	Pressure
 2020-01-13 13:56:00	4
 2020-01-13 14:13:00	Aura
