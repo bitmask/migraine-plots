@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 #
-# append to log
-# update times like "2 hours ago"
-# make sure 0's are entered that may not have been logged
-# change field separator to tab
+
+cat ~/Downloads/activity_20190816-102940.csv|awk -F"," '{print $2 "\t" $3}' >> log
+
+# fix date format!
+#   ctrl-v G d to delete extra space
+#   ctrl-v G :s/\t/:00\t/g to add seconds to time
 # comment out any comments that should not be parsed
 # change Eletriptan to 40mg eletriptan
 # change Domperidon to 10mg domperidon
-# run the following
 # make sure last line is not blank
+# run the following
 
 mkdir -p data/parsed
 mkdir plots
@@ -18,7 +20,7 @@ cat data/log | grep -v "#" | grep -i aura > data/parsed/aura
 cat data/log | grep -v "#" | grep -i naus > data/parsed/nausea
 grep eletriptan data/log|sed 's/mg /	/' > data/parsed/drugs
 
-cat data/log | grep -v "#" | grep -vi aura | grep -vi naus | grep -v mg | grep -v cannabis |grep -v amitriptiline > data/migraine_current
+cat data/log | grep -v "#" | grep -vi aura | grep -vi naus | grep -v mg | grep -v cannabis |grep -v amitriptiline |sort > data/migraine_current
 cat data/migraine_historical data/migraine_current > data/migraine
 python parse_migraine.py data/migraine > data/parsed/migraine_start_end
 

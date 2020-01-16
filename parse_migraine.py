@@ -14,7 +14,9 @@ if datafile:
                 end_dt = datetime.datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
                 start_dt = datetime.datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
                 delta = end_dt - start_dt
-                for h in range(delta.seconds + 1):
+                seconds = delta.days * 24*60*60 + delta.seconds
+                for h in range(seconds):
+                    h = h+1 # don't print this entry twice because range starts at 0
                     if h % 3600 == 0:
                         if int(saveintensity) > 0:
                             print str(start_dt + datetime.timedelta(seconds = h)) + "\t" + str(saveintensity)
