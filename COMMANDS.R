@@ -265,12 +265,11 @@ w2017mig <- ggplot(m %>% filter(y=="2017"), aes(x=w, fill=migraine)) + geom_bar(
 
 
 prevent$y <- format(prevent$date, "%Y")
-prevent$w <- format(prevent$date, "%w")
 prevent$drug <- gsub(" ", "", prevent$drug)
-prevent$drug <- factor(prevent$drug, levels=c("metoprolol", "amitriptyline", "candesartan", "indomethacin", "sertraline", "topiramate", "pizotifen", "nortriptyline"))
-drugcolours <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf')
+prevent$drug <- factor(prevent$drug, levels=c("metoprolol", "amitriptyline", "candesartan", "indomethacin", "sertraline", "mirena", "topiramate", "pizotifen", "nortriptyline", "citalopram"))
+drugcolours <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f7f','#a65628','#ffaa33','#f781bf', '#e41a1c', '#377eb8')
 text2020 <- prevent %>% filter(y=="2020", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
-w2020prev <- ggplot(prevent %>% filter(y=="2020"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2020-01-01"),as.POSIXct("2020-12-31"))) + geom_text(data=text2020, label=text2020$drug, hjust=0, nudge_x=0.5, nudge_y=5) + scale_colour_manual(values=drugcolours[7:8])
+w2020prev <- ggplot(prevent %>% filter(y=="2020"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2020-01-01"),as.POSIXct("2020-12-31"))) + geom_text(data=text2020, label=text2020$drug, hjust=0, nudge_x=0.5, nudge_y=2) + scale_colour_manual(values=drugcolours[c(6,8:10)])
 text2019 <- prevent %>% filter(y=="2019", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
 w2019prev <- ggplot(prevent %>% filter(y=="2019"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2019-01-01"),as.POSIXct("2019-12-31"))) + geom_text(data=text2019, label=text2019$drug, hjust=0, nudge_x=0.5, nudge_y=5) + scale_colour_manual(values=drugcolours[3:8])
 text2018 <- prevent %>% filter(y=="2018", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
