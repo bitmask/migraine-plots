@@ -2,8 +2,7 @@
 #
 
 if [ "$1" == "" ]; then
-    echo "usage: $0 export.csv"
-    exit 1
+    echo "rerunning with existing log"
 else
     if [ -f $1 ]; then
         cat $1 | awk -F"," '{print $2 "\t" $3}' | sed -e '1,9d' | sed 's/ //' | sed $'s/\t/:00\t/' | sed 's/Eletriptan/40mg eletriptan/' >> data/log
