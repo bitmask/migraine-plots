@@ -2,7 +2,8 @@
 #
 
 if [ "$1" == "" ]; then
-    echo "rerunning with existing log"
+    echo "press enter to rerun with existing log"
+    read -n 1
 else
     if [ -f $1 ]; then
         cat $1 | awk -F"," '{print $2 "\t" $3}' | sed -e '1,9d' | sed 's/ //' | sed $'s/\t/:00\t/' | sed 's/Eletriptan/40mg eletriptan/' >> data/log
