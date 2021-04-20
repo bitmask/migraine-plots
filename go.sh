@@ -2,7 +2,8 @@
 #
 
 if [ "$1" == "" ]; then
-    echo "press enter to rerun with existing log"
+    echo "press enter to rerun with existing log and not add new data"
+    echo "otherwise, pass new export as parameter"
     read -n 1
 else
     if [ -f $1 ]; then
