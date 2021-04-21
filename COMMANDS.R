@@ -202,6 +202,24 @@ ggsave(file.path(plots_dir, "migraine-plot-2020.pdf"), width=190, height=277, un
 plot_grid(title_2021, c2021q1, m2021q1, NULL, c2021q2, m2021q2, NULL, c2021q3, m2021q3, NULL, c2021q4, m2021q4, align="v", nrow=14, rel_heights=heights)
 ggsave(file.path(plots_dir, "migraine-plot-2021.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 
+
+# write migraine journal for neurologist
+
+# number of hours with headache
+journal <- m %>% group_by(day) %>% summarize(hours = n())
+
+# average pain score
+pain <- m %>% group_by(day) %>% summarize(pain = ceiling(mean(migraine)+2))
+journal <- left_join(journal, pain)
+
+# add drugs
+d <- drugs %>% select("drug", "mg", "day")
+journal <- left_join(journal, d)
+write.table(journal, file.path(plots_dir, "journal.csv"), quote=FALSE, sep="\t", row.names = FALSE, col.names = TRUE)
+
+
+
+
 # detailed plots
 # TODO: make these more useful
 #heights=c(1,3,3,1,10,2,3,3,1,10)
