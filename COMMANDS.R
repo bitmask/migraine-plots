@@ -215,7 +215,7 @@ journal <- left_join(journal, pain)
 # add drugs
 d <- drugs %>% select("drug", "mg", "day")
 journal <- left_join(journal, d)
-write.table(journal, file.path(plots_dir, "journal.csv"), quote=FALSE, sep="\t", row.names = FALSE, col.names = TRUE)
+write.table(journal, file.path(plots_dir, "journal.csv"), quote=FALSE, sep="\t", row.names = FALSE, col.names = TRUE, na="")
 
 
 
