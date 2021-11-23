@@ -209,7 +209,7 @@ ggsave(file.path(plots_dir, "migraine-plot-2021.pdf"), width=190, height=277, un
 journal <- m %>% group_by(day) %>% summarize(hours = n())
 
 # average pain score
-pain <- m %>% group_by(day) %>% summarize(pain = ceiling(mean(migraine)+2))
+pain <- m %>% group_by(day) %>% summarize(pain = floor(`^`(mean(migraine),1.2)))
 journal <- left_join(journal, pain)
 
 # add drugs
