@@ -147,6 +147,10 @@ m2021q1 <- make_migraine_plot("2021-01-01", "2021-03-31")
 m2021q2 <- make_migraine_plot("2021-04-01", "2021-06-30")
 m2021q3 <- make_migraine_plot("2021-07-01", "2021-09-30")
 m2021q4 <- make_migraine_plot("2021-10-01", "2021-12-31")
+m2022q1 <- make_migraine_plot("2022-01-01", "2022-03-31")
+m2022q2 <- make_migraine_plot("2022-04-01", "2022-06-30")
+m2022q3 <- make_migraine_plot("2022-07-01", "2022-09-30")
+m2022q4 <- make_migraine_plot("2022-10-01", "2022-12-31")
 
 
 c2017q3 <- make_clue_plot(c, "2017-07-01", "2017-09-30", "tomato", "darkred", "")
@@ -167,6 +171,10 @@ c2021q1 <- make_clue_plot(c, "2021-01-01", "2021-03-31", "tomato", "darkred", ""
 c2021q2 <- make_clue_plot(c, "2021-04-01", "2021-06-30", "tomato", "darkred", "")
 c2021q3 <- make_clue_plot(c, "2021-07-01", "2021-09-30", "tomato", "darkred", "")
 c2021q4 <- make_clue_plot(c, "2021-10-01", "2021-12-31", "tomato", "darkred", "")
+c2022q1 <- make_clue_plot(c, "2022-01-01", "2022-03-31", "tomato", "darkred", "")
+c2022q2 <- make_clue_plot(c, "2022-04-01", "2022-06-30", "tomato", "darkred", "")
+c2022q3 <- make_clue_plot(c, "2022-07-01", "2022-09-30", "tomato", "darkred", "")
+c2022q4 <- make_clue_plot(c, "2022-10-01", "2022-12-31", "tomato", "darkred", "")
 
 
 a2017q3 <- make_other_plot(aura, "2017-07-01", "2017-09-30", "lightgreen", "darkgreen", "aura")
@@ -188,6 +196,7 @@ title_2018 <- ggdraw() + draw_label("2018", fontface='bold')
 title_2019 <- ggdraw() + draw_label("2019", fontface='bold')
 title_2020 <- ggdraw() + draw_label("2020", fontface='bold')
 title_2021 <- ggdraw() + draw_label("2021", fontface='bold')
+title_2022 <- ggdraw() + draw_label("2022", fontface='bold')
 
 # by year
 heights=c(1,1,6,2,1,6,2,1,6,2,1,6,2)
@@ -201,7 +210,8 @@ plot_grid(title_2020, c2020q1, m2020q1, NULL, c2020q2, m2020q2, NULL, c2020q3, m
 ggsave(file.path(plots_dir, "migraine-plot-2020.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2021, c2021q1, m2021q1, NULL, c2021q2, m2021q2, NULL, c2021q3, m2021q3, NULL, c2021q4, m2021q4, align="v", nrow=14, rel_heights=heights)
 ggsave(file.path(plots_dir, "migraine-plot-2021.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
-
+plot_grid(title_2022, c2022q1, m2022q1, NULL, c2022q2, m2022q2, NULL, c2022q3, m2022q3, NULL, c2022q4, m2022q4, align="v", nrow=14, rel_heights=heights)
+ggsave(file.path(plots_dir, "migraine-plot-2022.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 
 # write migraine journal for neurologist
 
@@ -289,6 +299,7 @@ m$yw <- format(m$date, "%yw%W")
 m$y <- format(m$date, "%Y")
 m$w <- as.factor(format(m$date, "%W"))
 xlim <- levels(m$w)
+w2022mig <- ggplot(m %>% filter(y=="2022"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 w2021mig <- ggplot(m %>% filter(y=="2021"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 w2020mig <- ggplot(m %>% filter(y=="2020"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 w2019mig <- ggplot(m %>% filter(y=="2019"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
@@ -300,6 +311,8 @@ prevent$y <- format(prevent$date, "%Y")
 prevent$drug <- gsub(" ", "", prevent$drug)
 prevent$drug <- factor(prevent$drug, levels=c("metoprolol", "amitriptyline", "candesartan", "indomethacin", "sertraline", "mirena", "topiramate", "pizotifen", "nortriptyline", "citalopram"))
 drugcolours <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f7f','#a65628','#ffaa33','#f781bf', '#e41a1c', '#377eb8')
+text2022 <- prevent %>% filter(y=="2022", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
+w2022prev <- ggplot(prevent %>% filter(y=="2022"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2022-01-01"),as.POSIXct("2022-12-31"))) + geom_text(data=text2022, label=text2022$drug, hjust=0, nudge_x=0.5, nudge_y=2) + scale_colour_manual(values=drugcolours[c(6,8:10)])
 text2021 <- prevent %>% filter(y=="2021", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
 w2021prev <- ggplot(prevent %>% filter(y=="2021"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2021-01-01"),as.POSIXct("2021-12-31"))) + geom_text(data=text2021, label=text2021$drug, hjust=0, nudge_x=0.5, nudge_y=2) + scale_colour_manual(values=drugcolours[c(6,8:10)])
 text2020 <- prevent %>% filter(y=="2020", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
@@ -313,6 +326,8 @@ w2017prev <- ggplot(prevent %>% filter(y=="2017"), aes(x=date, y=mg, col=drug)) 
 
 
 heights=c(1,6,6)
+plot_grid(title_2022, w2022mig, w2022prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
+ggsave(file.path(plots_dir, "migraine-weeks-2022.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2021, w2021mig, w2021prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2021.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2020, w2020mig, w2020prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
