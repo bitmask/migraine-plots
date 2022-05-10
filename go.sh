@@ -7,7 +7,7 @@ if [ "$1" == "" ]; then
     read -n 1
 else
     if [ -f $1 ]; then
-        cat $1 | awk -F"," '{print $2 "\t" $3}' | sed -e '1,9d' | sed 's/ //' | sed $'s/\t/:00\t/' | sed 's/Eletriptan/40mg eletriptan/' >> data/log
+        cat $1 | sed -e '1,5d' | perl -nale '@col=split /,/; $text = $col[2]; $text=~s/"//g; @dt=split " ", $col[1]; $date=$dt[0]; $time=$dt[1] . ":00"; @dmy=split "/", $date; print $dmy[2] . "-". $dmy[1] ."-". $dmy[0] ." ". $time ."\t". $text' >> data/log
         echo "edit log because not everything can be automated"
         echo " - comment out any comments that should not be parsed"
         echo " - add preventative to changes in daily meds"

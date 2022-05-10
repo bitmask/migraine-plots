@@ -294,6 +294,8 @@ m$ym <- format(m$date, "%y/%m")
 ggplot(m, aes(x=ym, fill=migraine)) + geom_bar() + labs(y="hours", x="month") + theme_bw() + theme(axis.text.x = element_text(size = 6), legend.position="none") + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 ggsave(file.path(plots_dir, "migraine_bar.pdf"), width=277, height=190, units="mm")
 
+print("saved migraine_bar")
+
 # migraine hours per week
 m$yw <- format(m$date, "%yw%W")
 m$y <- format(m$date, "%Y")
@@ -306,11 +308,12 @@ w2019mig <- ggplot(m %>% filter(y=="2019"), aes(x=w, fill=migraine)) + geom_bar(
 w2018mig <- ggplot(m %>% filter(y=="2018"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 w2017mig <- ggplot(m %>% filter(y=="2017"), aes(x=w, fill=migraine)) + geom_bar() + labs(y="hours", x="week") + theme_bw() + theme(axis.text.x = element_text(size=6)) + theme(legend.position = "none") + scale_x_discrete(lim=xlim) + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333"))
 
+print("made plots for weeks")
 
 prevent$y <- format(prevent$date, "%Y")
 prevent$drug <- gsub(" ", "", prevent$drug)
-prevent$drug <- factor(prevent$drug, levels=c("metoprolol", "amitriptyline", "candesartan", "indomethacin", "sertraline", "mirena", "topiramate", "pizotifen", "nortriptyline", "citalopram"))
-drugcolours <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f7f','#a65628','#ffaa33','#f781bf', '#e41a1c', '#377eb8')
+prevent$drug <- factor(prevent$drug, levels=c("metoprolol", "amitriptyline", "candesartan", "indomethacin", "sertraline", "mirena", "topiramate", "pizotifen", "nortriptyline", "citalopram", "riboflavin", "pregabalin"))
+drugcolours <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f7f','#a65628','#ffaa33','#f781bf', '#e41a1c', '#377eb8', '#041a1c', '#077eb8')
 text2022 <- prevent %>% filter(y=="2022", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
 w2022prev <- ggplot(prevent %>% filter(y=="2022"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2022-01-01"),as.POSIXct("2022-12-31"))) + geom_text(data=text2022, label=text2022$drug, hjust=0, nudge_x=0.5, nudge_y=2) + scale_colour_manual(values=drugcolours[c(6,8:10)])
 text2021 <- prevent %>% filter(y=="2021", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
@@ -324,26 +327,36 @@ w2018prev <- ggplot(prevent %>% filter(y=="2018"), aes(x=date, y=mg, col=drug)) 
 text2017 <- prevent %>% filter(y=="2017", mg!=0) %>% group_by(drug) %>% summarize(date=min(date), mg=min(mg))
 w2017prev <- ggplot(prevent %>% filter(y=="2017"), aes(x=date, y=mg, col=drug)) + geom_line() + theme_bw() + theme(legend.position = "none", axis.text.x = element_text(hjust=0)) + scale_x_datetime(expand=c(0.01,0.01), breaks=pretty_breaks(n=6), lim=c(as.POSIXct("2017-01-01"),as.POSIXct("2017-12-31"))) + geom_text(data=text2017, label=text2017$drug, hjust=0, nudge_x=0.5, nudge_y=5) + scale_colour_manual(values=drugcolours)
 
+print("made more plots for weeks")
+
 
 heights=c(1,6,6)
 plot_grid(title_2022, w2022mig, w2022prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2022.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
+print("saved weeks 2022")
 plot_grid(title_2021, w2021mig, w2021prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2021.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
+print("saved weeks 2021")
 plot_grid(title_2020, w2020mig, w2020prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2020.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
+print("saved weeks 2020")
 plot_grid(title_2019, w2019mig, w2019prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2019.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
+print("saved weeks 2019")
 plot_grid(title_2018, w2018mig, w2018prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2018.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2017, w2017mig, w2017prev, align="v", axis=c("b"), nrow=3, rel_heights=heights) 
 ggsave(file.path(plots_dir, "migraine-weeks-2017.pdf"), width=277, height=190, units="mm") # fit on A4 with 10cm borders on all sides
+
+print("saved migraine weeks")
 
 # migraine days per month
 m$ym <- format(m$date, "%y/%m")
 migraine_per_month <- m %>% group_by(ym) %>% summarize(n=n(), mdays=length(unique(day)))
 ggplot(migraine_per_month, aes(x=ym, y=mdays)) + geom_point() + theme_bw() + scale_fill_manual(values=c("#CCCCCC", "#999999", "#333333")) + ylab("migraine days per month") + xlab("") + geom_abline(intercept=15, slope=0) + ylim(c(0,31))
 ggsave(file.path(plots_dir, "migraine_per_month.pdf"), width=277, height=190, units="mm")
+
+print("saved migraine month")
 
 # aura
 days_elapsed <- as.numeric(as.POSIXct(max(aura$day)) - as.POSIXct(min(aura$day)))
