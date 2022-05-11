@@ -26,6 +26,7 @@ if datafile:
                         print str(start_dt + datetime.timedelta(days=h)) + "\t" + str(mg) + "\t" + drug
             else:
                 # go through all the timestamps
+                firstzero = 1 # only print the first zero, if drug is stopped and resumed, don't print all the intervening zeros
                 for entry in entries:
                     (date, mg, drug) = entry
                     if start is not None:
@@ -34,7 +35,13 @@ if datafile:
                         delta = end_dt - start_dt
                         for h in range(delta.days):
                             h = h+1
-                            print str(start_dt + datetime.timedelta(days=h)) + "\t" + str(savemg) + "\t" + thisdrug
+                            if firstzero:
+                                print str(start_dt + datetime.timedelta(days=h)) + "\t" + str(savemg) + "\t" + thisdrug
+                            else:
+                                if savemg > 0: # drug has been resumed, so reset and print the next zero
+                                    firstzero=1
+                            if savemg == "0":
+                                firstzero=0 # don't print any more zeros
                     start = date
                     start_dt = datetime.datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
                     savemg = mg
