@@ -1,6 +1,17 @@
 # migraine-plots
 Generate nice plots of my horrible migraines
 
+# Install
+
+sudo apt-get install r-base-core
+
+install.packages("lubridate")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("scales")
+install.packages("cowplot")
+
+
 # Methods
 
 Logging is done as a change in symptoms is noticed, or as soon as is possible, in a simple app (called MultiLog) on my mobile phone.  I compare my symptoms to what I have experienced in the past to attempt to keep to a standard scale of severity.  This severity will then be represented in the figure for each hour until a change in severity is recorded.  Lack of a headache is also recorded, and with great joy.  This data is accurate to an hourly resolution.
