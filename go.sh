@@ -29,16 +29,16 @@ if [ ! -d plots ]; then
     mkdir plots
 fi
 
-python parse_clue.py $(find . -type f -name "ClueBackup-*" |sort|tail -n 1) |sort|uniq|grep -E 'light|medium|heavy|spotting' > data/parsed/clue.read
+python2 parse_clue.py $(find . -type f -name "ClueBackup-*" |sort|tail -n 1) |sort|uniq|grep -E 'light|medium|heavy|spotting' > data/parsed/clue.read
 cat data/log | grep -v "#" | grep -i aura > data/parsed/aura
 cat data/log | grep -v "#" | grep -i naus > data/parsed/nausea
 grep -v "#" data/log|grep mg|grep -v preventative|sed 's/mg /	/' > data/parsed/drugs
 grep preventative data/log|sed 's/preventative.*$//'|sed 's/mg /	/' | sed 's/ $//' > data/preventatives
-python parse_preventatives.py data/preventatives > data/parsed/preventatives_start_end
+python2 parse_preventatives.py data/preventatives > data/parsed/preventatives_start_end
 
 cat data/log | grep -v "#" | grep -vi aura | grep -vi naus | grep -v mg | grep -v cannabis |grep -v amitriptiline |grep -v preventative|sort > data/migraine_current
 cat data/migraine_historical data/migraine_current > data/migraine
-python parse_migraine.py data/migraine > data/parsed/migraine_start_end
+python2 parse_migraine.py data/migraine > data/parsed/migraine_start_end
 
 ./COMMANDS.R
 
