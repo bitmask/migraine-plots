@@ -159,6 +159,10 @@ m2024q1 <- make_migraine_plot("2024-01-01", "2024-03-31")
 m2024q2 <- make_migraine_plot("2024-04-01", "2024-06-30")
 m2024q3 <- make_migraine_plot("2024-07-01", "2024-09-30")
 m2024q4 <- make_migraine_plot("2024-10-01", "2024-12-31")
+m2025q1 <- make_migraine_plot("2025-01-01", "2025-03-31")
+m2025q2 <- make_migraine_plot("2025-04-01", "2025-06-30")
+m2025q3 <- make_migraine_plot("2025-07-01", "2025-09-30")
+m2025q4 <- make_migraine_plot("2025-10-01", "2025-12-31")
 
 
 c2017q3 <- make_clue_plot(c, "2017-07-01", "2017-09-30", "tomato", "darkred", "")
@@ -191,6 +195,10 @@ c2024q1 <- make_clue_plot(c, "2024-01-01", "2024-03-31", "tomato", "darkred", ""
 c2024q2 <- make_clue_plot(c, "2024-04-01", "2024-06-30", "tomato", "darkred", "")
 c2024q3 <- make_clue_plot(c, "2024-07-01", "2024-09-30", "tomato", "darkred", "")
 c2024q4 <- make_clue_plot(c, "2024-10-01", "2024-12-31", "tomato", "darkred", "")
+c2025q1 <- make_clue_plot(c, "2025-01-01", "2025-03-31", "tomato", "darkred", "")
+c2025q2 <- make_clue_plot(c, "2025-04-01", "2025-06-30", "tomato", "darkred", "")
+c2025q3 <- make_clue_plot(c, "2025-07-01", "2025-09-30", "tomato", "darkred", "")
+c2025q4 <- make_clue_plot(c, "2025-10-01", "2025-12-31", "tomato", "darkred", "")
 
 
 a2017q3 <- make_other_plot(aura, "2017-07-01", "2017-09-30", "lightgreen", "darkgreen", "aura")
@@ -215,6 +223,7 @@ title_2021 <- ggdraw() + draw_label("2021", fontface='bold')
 title_2022 <- ggdraw() + draw_label("2022", fontface='bold')
 title_2023 <- ggdraw() + draw_label("2023", fontface='bold')
 title_2024 <- ggdraw() + draw_label("2024", fontface='bold')
+title_2025 <- ggdraw() + draw_label("2025", fontface='bold')
 
 # by year
 heights=c(1,1,6,2,1,6,2,1,6,2,1,6,2)
@@ -234,6 +243,8 @@ plot_grid(title_2023, c2023q1, m2023q1, NULL, c2023q2, m2023q2, NULL, c2023q3, m
 ggsave(file.path(plots_dir, "migraine-plot-2023.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 plot_grid(title_2024, c2024q1, m2024q1, NULL, c2024q2, m2024q2, NULL, c2024q3, m2024q3, NULL, c2024q4, m2024q4, align="v", nrow=14, rel_heights=heights)
 ggsave(file.path(plots_dir, "migraine-plot-2024.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
+plot_grid(title_2025, c2025q1, m2025q1, NULL, c2025q2, m2025q2, NULL, c2025q3, m2025q3, NULL, c2025q4, m2025q4, align="v", nrow=14, rel_heights=heights)
+ggsave(file.path(plots_dir, "migraine-plot-2025.pdf"), width=190, height=277, units="mm") # fit on A4 with 10cm borders on all sides
 
 # write migraine journal for neurologist
 
